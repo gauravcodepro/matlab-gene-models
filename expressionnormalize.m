@@ -12,8 +12,11 @@
  column = input(prompt, "please provide the column number")
  if (~ column) 
     fileread = readtable(readfile, "sheet")
+    maxexpression = readtable(readfile, "sheet")
  elseif 
     fileredcolumn = readtable(readfile, "sheet", "column")
+    maxexpr = Max(readtable(readfile, "sheet", "column"))
+
 expressionadd = []
 for i in 1:
  
