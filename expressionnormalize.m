@@ -8,18 +8,17 @@
  implemented the readtable instead of the readxls for faster reading of the files.
 %}
 
-% prompt asking for the input file, column and the sheet
+% prompt asking for the input file and column
  readfile = input(prompt, "please provide the gene expression file")
- sheet = input(prompt, "please provide the sheet number")
  column = input(prompt, "please provide the column number")
-% condition evaluation
+% condition evaluation estimating that the expression are stored in the first sheet
  if (~ column) 
-    fileread = readtable(readfile, "sheet")
+    fileread = readtable(readfile)
     expression = readtable(readfile, "sheet")
-    maxexpr = Max(expression[:,1])
+    maxexpr = max(expression(:,1]))
  elseif 
-    fileredcolumn = readtable(readfile, "sheet", "column")
-    maxexpr = Max(readtable(readfile, "sheet", "column"))
+    fileredcolumn = readtable(readfile)
+    maxexpr = max(readtable(readfile(:,column))
   end
 % opening a array of empty zeros with length of the filtered column
 expressionadd = zero(1,length(filteredcolumn))
