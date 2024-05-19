@@ -12,14 +12,13 @@ import pandas as pd
 import math
 import matlab.engine
 st.set_page_config(
-                 page_title="Universitat Potsdam Matlab Web Interface",
+                 page_title="Matlab Web Interface",
                  page_icon="Universitat Potsdam",
                  layout="centered",
                  initial_sidebar_state="expanded")
 st.image("https://www.uni-potsdam.de/typo3conf/ext/up_template/Resources/Public/Images/logos/up_logo_international_2.png", width = 100)
-st.header("Universitat Potsdam Matlab webinterface for the Universitat Potsdam, Germany")
+st.header("Matlab webinterface")
 st.subheader("Developed by Gaurav Sablok, Academic Staff Member, Bioinformatics, Universitat Potsdam, Germany", )
-st.subheader("Matlab web interface, Universitat Potsdam, Germany")
 namedir = st.text_input("please enter the name of the directory")
 workdir = st.text_input("please enter the name of the working directory")
 click = st.button("makedirectory")
