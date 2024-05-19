@@ -40,4 +40,3 @@ logtransformed = eng.expressionormalize(selectcol)
 engclick = st.button("give me the normalized values")
 if engclick:
   st.write(f"The normalized values are {logtransformed}") 
-
